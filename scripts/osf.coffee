@@ -1,4 +1,5 @@
 module.exports = (robot) ->
+
     robot.respond /who is (.+)\?/i, (msg) ->
         userId = msg.match[1]
         url = 'https://osf.io/api/v1/profile/' + userId + '/'
@@ -8,6 +9,7 @@ module.exports = (robot) ->
                     msg.send "Error: #{err}"
                 data = JSON.parse(body)
                 msg.send "User #{userId} is known to humans as \"#{data.profile.fullname}\""
+
     robot.respond /what is (.+)\?/i, (msg) ->
         nodeId = msg.match[1]
         url = 'https://osf.io/api/v1/project/' + nodeId + '/'
@@ -17,3 +19,6 @@ module.exports = (robot) ->
                     msg.send "Error: #{err}"
                 data = JSON.parse(body)
                 msg.send "Project ID #{nodeId} is titled \"#{data.node.title}\""
+
+    robot.respond /introduce yourself/i, (msg) ->
+        msg.send "I am your minion. I live only to serve."
