@@ -1,2 +1,46 @@
 node_modules
 .DS_Store*
+# OS generated files
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*.swp
+*~
+
+# R
+#######################
+.Rhistory
+
+# Python
+#######################
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib64
+__pycache__
+pip-log.txt
+.coverage
+.tox
+nosetests.xml
+*.mo
+.idea
+.hg
+.hgignore
+env/*
+cover/
